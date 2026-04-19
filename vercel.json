@@ -1,15 +1,11 @@
 {
   "buildCommand": "pip install -r requirements.txt",
   "framework": "flask",
-  "functions": {
-    "*.py": {
-      "runtime": "python3.11"
-    }
-  },
   "env": [
     "PUBLIC_BASE",
     "HOOK_TOKEN",
     "DISCORD_WEBHOOK",
+    "DISCORD_BOT_TOKEN",
     "INTERSTITIAL_DELAY",
     "APPEND_WHITELIST"
   ]
