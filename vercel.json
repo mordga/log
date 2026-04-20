@@ -1,6 +1,13 @@
 {
   "buildCommand": "pip install -r requirements.txt",
-  "framework": "flask",
+  "outputDirectory": ".",
+  "framework": null,
+  "runtime": "python3.9",
+  "functions": {
+    "api/**/*.py": {
+      "runtime": "python3.9"
+    }
+  },
   "env": {
     "PUBLIC_BASE": {
       "description": "URL pública de tu app en Vercel"
