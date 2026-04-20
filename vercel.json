@@ -2,7 +2,6 @@
   "buildCommand": "pip install -r requirements.txt",
   "outputDirectory": ".",
   "framework": null,
-  "runtime": "python3.9",
   "functions": {
     "api/**/*.py": {
       "runtime": "python3.9"
