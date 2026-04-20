@@ -1,12 +1,26 @@
 {
   "buildCommand": "pip install -r requirements.txt",
   "framework": "flask",
-  "env": [
-    "PUBLIC_BASE",
-    "HOOK_TOKEN",
-    "DISCORD_WEBHOOK",
-    "DISCORD_BOT_TOKEN",
-    "INTERSTITIAL_DELAY",
-    "APPEND_WHITELIST"
-  ]
+  "env": {
+    "PUBLIC_BASE": {
+      "description": "URL pública de tu app en Vercel"
+    },
+    "HOOK_TOKEN": {
+      "description": "Token secreto para autenticar requests"
+    },
+    "DISCORD_WEBHOOK": {
+      "description": "Webhook de Discord para notificaciones"
+    },
+    "DISCORD_BOT_TOKEN": {
+      "description": "Token del bot de Discord"
+    },
+    "INTERSTITIAL_DELAY": {
+      "description": "Delay en segundos antes de redirigir",
+      "default": "5"
+    },
+    "APPEND_WHITELIST": {
+      "description": "Dominios para append mode",
+      "default": "github.com,example.com"
+    }
+  }
 }
