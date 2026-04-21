@@ -11,11 +11,15 @@ HOOK_TOKEN = os.environ.get('HOOK_TOKEN')
 PUBLIC_BASE = os.environ.get('PUBLIC_BASE', 'https://tu-proyecto.vercel.app')
 
 if not DISCORD_BOT_TOKEN:
-    print("❌ DISCORD_BOT_TOKEN no configurado en .env")
+    print("❌ DISCORD_BOT_TOKEN no configurado")
     exit(1)
 
+# IMPORTANTE: Agregar estos intents
 intents = discord.Intents.default()
 intents.message_content = True
+intents.guilds = True  # AGREGAR ESTO
+intents.guild_messages = True  # AGREGAR ESTO
+
 bot = commands.Bot(command_prefix='/', intents=intents)
 
 @bot.event
@@ -79,4 +83,6 @@ async def track(
             ephemeral=True
         )
 
-bot.run(DISCORD_BOT_TOKEN)
+# IMPORTANTE: Cambiar esta línea
+if __name__ == "__main__":
+    bot.run(DISCORD_BOT_TOKEN)
